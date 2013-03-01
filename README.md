@@ -8,6 +8,24 @@ An HTML::Pipeline filter for handling WikiMedia-style wiki links.
 
 ## Installation
 
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'html-pipeline-cite'
+```
+
+And then execute:
+
+```sh
+$ bundle
+```
+
+Or install it yourself as:
+
+```sh
+$ gem install html-pipeline-cite
+```
+
 ## Usage
 
 ## Troubleshooting

@@ -11,7 +11,7 @@ An HTML::Pipeline filter for handling WikiMedia-style wiki links.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'html-pipeline-cite'
+gem 'html-pipeline-wiki-link'
 ```
 
 And then execute:
@@ -23,7 +23,7 @@ $ bundle
 Or install it yourself as:
 
 ```sh
-$ gem install html-pipeline-cite
+$ gem install html-pipeline-wiki-link
 ```
 
 ## Usage

@@ -12,20 +12,11 @@ module HTML
       # 
       # @return [String] Updated text with translated wiki links.
       def call
-        text = html.gsub(/\[\[(.*)\|(.*)\]\]/) do |match|
+        html.gsub(/\[\[([^|]*)(\|(.*))?\]\]/) do
           link = $1
-          desc = $2
+          desc = $3 ? $3 : $1
 
           link = convert_whitespace(link)
-          desc = collapse_whitespace(desc)
-
-          "<a href=\"/#{link}\">#{desc}</a>"
-        end
-
-        text.gsub(/\[\[(.*)\]\]/) do |match|
-          desc = $1
-          
-          link = convert_whitespace(desc)
           desc = collapse_whitespace(desc)
 
           "<a href=\"/#{link}\">#{desc}</a>"

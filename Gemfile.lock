@@ -26,6 +26,7 @@ GEM
     multi_json (1.6.1)
     nokogiri (1.5.6)
     rake (10.0.2)
+    redcarpet (2.1.1)
     rinku (1.7.2)
     sanitize (2.0.3)
       nokogiri (>= 1.4.4, < 1.6)
@@ -38,4 +39,5 @@ DEPENDENCIES
   html-pipeline-wiki-link!
   minitest (~> 3.0)
   rake (~> 10.0)
-  yard
+  redcarpet
+  yard (~> 0.8)

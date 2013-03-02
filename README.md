@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/lifted-studios/html-pipeline-cite.png?branch=master)](https://travis-ci.org/lifted-studios/html-pipeline-cite)
+[![Build Status](https://travis-ci.org/lifted-studios/html-pipeline-wiki-link.png?branch=master)](https://travis-ci.org/lifted-studios/html-pipeline-wiki-link)
 
 # HTML::Pipeline WikiLink Gem
 

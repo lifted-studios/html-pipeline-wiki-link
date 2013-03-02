@@ -35,7 +35,7 @@ filter = HTML::Pipeline::WikiLinkFilter.new('Some text with a [[Link]] in it.')
 filter.call
 ```
 
-Filters can be combined into a pipeline which causes each filter to hand its output to the next filter's input.  For example, you could support wiki links in markdown by creating a pipeline like this:
+Filters can be combined into a pipeline which causes each filter to hand its output to the next filter's input.  For example, you could support wiki links in Markdown by creating a pipeline like this:
 
 ```ruby
 pipeline = HTML::Pipeline.new [

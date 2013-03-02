@@ -1,6 +1,4 @@
-<!-- 
-[![Build Status](NOTE: Use something like Travis CI http://about.travis-ci.org/docs/user/getting-started/)
- -->
+[![Build Status](https://travis-ci.org/lifted-studios/html-pipeline-cite.png?branch=master)](https://travis-ci.org/lifted-studios/html-pipeline-cite)
 
 # HTML::Pipeline WikiLink Gem
 

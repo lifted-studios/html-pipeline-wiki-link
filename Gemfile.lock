@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    html-pipeline-wiki-link (0.0.1)
+    html-pipeline-wiki-link (0.0.2)
       html-pipeline (>= 0.0.8)
 
 GEM

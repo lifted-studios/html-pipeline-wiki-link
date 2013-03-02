@@ -60,7 +60,9 @@ To see what has changed in recent versions of Lifted Wiki, see the [CHANGELOG](C
 
 * [Lee Dohm](https://github.com/lee-dohm/)
 
+<!--
 ## Resources
+-->
 
 <!-- ### Other questions
 

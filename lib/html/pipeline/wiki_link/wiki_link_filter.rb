@@ -12,8 +12,24 @@ module HTML
       # 
       # @return [String] Updated text with translated wiki links.
       def call
-        text = html.gsub(/\[\[(.*)\|(.*)\]\]/, '<a href="/\1">\2</a>')
-        text.gsub(/\[\[(.*)\]\]/, '<a href="/\1">\1</a>')
+        text = html.gsub(/\[\[(.*)\|(.*)\]\]/) do |match|
+          link = $1
+          desc = $2
+
+          link.gsub!(/\s+/, '_')
+          desc.gsub!(/\s+/, ' ')
+
+          "<a href=\"/#{link}\">#{desc}</a>"
+        end
+
+        text.gsub(/\[\[(.*)\]\]/) do |match|
+          desc = $1
+          
+          link = desc.gsub(/\s+/, '_')
+          desc.gsub!(/\s+/, ' ')
+
+          "<a href=\"/#{link}\">#{desc}</a>"
+        end
       end
     end
   end

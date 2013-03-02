@@ -26,7 +26,7 @@ $ gem install html-pipeline-wiki-link
 
 ## Usage
 
-This library is designed as an extension of the [HTML::Pipeline]() system for creating pipelines of text conversions.  It can work on its own or in conjunction with other filters descended from `HTML::Pipeline::Filter`.
+This library is designed as an extension of the [HTML::Pipeline](https://github.com/jch/html-pipeline) system for creating pipelines of text conversions.  It can work on its own or in conjunction with other filters descended from `HTML::Pipeline::Filter`.
 
 To use this filter on its own:
 
@@ -54,7 +54,7 @@ CODE
 
 ## Development
 
-To see what has changed in recent versions of Lifted Wiki, see the [CHANGELOG](https://github.com/lifted-studios/html-pipeline-wiki-link/blob/master/CHANGELOG.md).
+To see what has changed in recent versions of Lifted Wiki, see the [CHANGELOG](CHANGELOG.md).
 
 ## Core Team Members
 
@@ -69,6 +69,6 @@ Feel free to chat with the Lifted Wiki core team (and many other users) on IRC i
 
 ## Copyright
 
-Copyright © 2013 Lee Dohm, Lifted Studios. See [LICENSE](https://github.com/lifted-studios/html-pipeline-wiki-link/blob/master/LICENSE.md) for details.
+Copyright © 2013 Lee Dohm, Lifted Studios. See [LICENSE](LICENSE.md) for details.
 
 Project is a member of the [OSS Manifesto](http://ossmanifesto.com/).

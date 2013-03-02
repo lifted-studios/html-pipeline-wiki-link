@@ -14,9 +14,10 @@ describe HTML::Pipeline::WikiLinkFilter do
   # Creates a new `WikiLinkFilter` object.
   # 
   # @param text Text for the filter to parse.
+  # @param context Context object to pass to the constructor. 
   # @return [HTML::Pipeline::WikiLinkFilter] Newly created filter object.
-  def new_filter(text)
-    HTML::Pipeline::WikiLinkFilter.new(text)
+  def new_filter(text, context = {})
+    HTML::Pipeline::WikiLinkFilter.new(text, context)
   end
 
   it 'can be instantiated' do
@@ -71,5 +72,13 @@ describe HTML::Pipeline::WikiLinkFilter do
     text = filter.call
 
     text.must_equal '<a href="/Many_Spaces">Many Spaces</a>'
+  end
+
+  it 'replaces spaces with other characters when given a :space_replacement parameter' do
+    filter = new_filter('[[A Link With Spaces]]', :space_replacement => '*')
+
+    text = filter.call
+
+    text.must_equal '<a href="/A*Link*With*Spaces">A Link With Spaces</a>'
   end
 end

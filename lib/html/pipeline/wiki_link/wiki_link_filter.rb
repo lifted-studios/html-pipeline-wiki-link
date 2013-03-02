@@ -8,6 +8,23 @@ module HTML
   class Pipeline
     # An `HTML::Pipeline` filter class that detects wiki-style links and converts them to HTML links.
     class WikiLinkFilter < Filter
+      # Initializes a new instance of the `WikiLinkFilter` class.
+      #
+      # @param doc     Document to filter.
+      # @param context Parameters for the filter.
+      # @param result  Results extracted from the filter.
+      def initialize(doc, context = nil, result = nil)
+        super(doc, context, result)
+
+        @base_url = '/'
+        @space_replacement = '_'
+        
+        if context
+          @base_url = context[:base_url] if context[:base_url]
+          @space_replacement = context[:space_replacement] if context[:space_replacement]
+        end
+      end
+
       # Performs the translation and returns the updated text.
       # 
       # @return [String] Updated text with translated wiki links.
@@ -19,7 +36,7 @@ module HTML
           link = convert_whitespace(link)
           desc = collapse_whitespace(desc)
 
-          "<a href=\"/#{link}\">#{desc}</a>"
+          "<a href=\"#{@base_url}#{link}\">#{desc}</a>"
         end
       end
 
@@ -38,7 +55,7 @@ module HTML
       # @param text Text within which to replace spaces.
       # @return Text with spaces replaced with underscores.
       def convert_whitespace(text)
-        text.gsub(/\s+/, '_')
+        text.gsub(/\s+/, @space_replacement)
       end
     end
   end

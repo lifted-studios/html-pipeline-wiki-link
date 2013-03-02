@@ -28,6 +28,30 @@ $ gem install html-pipeline-wiki-link
 
 ## Usage
 
+This library is designed as an extension of the [HTML::Pipeline]() system for creating pipelines of text conversions.  It can work on its own or in conjunction with other filters descended from `HTML::Pipeline::Filter`.
+
+To use this filter on its own:
+
+```ruby
+require 'html/pipeline/wiki_link'
+
+filter = HTML::Pipeline::WikiLinkFilter.new('Some text with a [[Link]] in it.')
+filter.call
+```
+
+Filters can be combined into a pipeline which causes each filter to hand its output to the next filter's input.  For example, you could support wiki links in markdown by creating a pipeline like this:
+
+```ruby
+pipeline = HTML::Pipeline.new [
+  HTML::Pipeline::MarkdownFilter,
+  HTML::Pipeline::WikiLinkFilter
+]
+
+result = pipeline.call <<-CODE
+This is some **Markdown** with a [[Link]] in it!
+CODE
+```
+
 ## Troubleshooting
 
 ## Development

@@ -16,8 +16,8 @@ module HTML
           link = $1
           desc = $2
 
-          link.gsub!(/\s+/, '_')
-          desc.gsub!(/\s+/, ' ')
+          link = convert_spaces(link)
+          desc = collapse_spaces(desc)
 
           "<a href=\"/#{link}\">#{desc}</a>"
         end
@@ -25,11 +25,29 @@ module HTML
         text.gsub(/\[\[(.*)\]\]/) do |match|
           desc = $1
           
-          link = desc.gsub(/\s+/, '_')
-          desc.gsub!(/\s+/, ' ')
+          link = convert_spaces(desc)
+          desc = collapse_spaces(desc)
 
           "<a href=\"/#{link}\">#{desc}</a>"
         end
+      end
+
+      private
+
+      # Collapses multiple whitespace characters into a single space.
+      # 
+      # @param text Text within which to collapse whitespace.
+      # @return Text with collapsed whitespace.
+      def collapse_spaces(text)
+        text.gsub(/\s+/, ' ')
+      end
+
+      # Converts spaces to underscores in the given text.
+      # 
+      # @param text Text within which to replace spaces.
+      # @return Text with spaces replaced with underscores.
+      def convert_spaces(text)
+        text.gsub(/\s+/, '_')
       end
     end
   end

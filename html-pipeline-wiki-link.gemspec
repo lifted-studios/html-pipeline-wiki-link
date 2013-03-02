@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.version = HTML::Pipeline::WikiLink::VERSION
   s.date    = Date.today.to_s
 
-  s.summary     = "A personal wiki solution"
-  s.description = "A personal wiki solution inspired by Gollum"
+  s.summary     = "An HTML::Pipeline filter for WikiMedia-style wiki links."
+  s.description = "An HTML::Pipeline filter for WikiMedia-style wiki links."
 
   s.authors  = ["Lee Dohm"]
   s.email    = 'lee@liftedstudios.com'

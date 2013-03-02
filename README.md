@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/lifted-studios/html-pipeline-wiki-link.png?branch=master)](https://travis-ci.org/lifted-studios/html-pipeline-wiki-link)
-
-# HTML::Pipeline WikiLink Gem
+# HTML::Pipeline WikiLink Gem [![Build Status](https://travis-ci.org/lifted-studios/html-pipeline-wiki-link.png?branch=master)](https://travis-ci.org/lifted-studios/html-pipeline-wiki-link)
 
 An HTML::Pipeline filter for handling WikiMedia-style wiki links.
 

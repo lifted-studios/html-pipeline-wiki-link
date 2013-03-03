@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.0.4
+
+* Add handling for special characters and leading or trailing whitespace.
+
 ## 0.0.3
 
 * Fixed erroneous gem description.

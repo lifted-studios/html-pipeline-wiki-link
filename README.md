@@ -54,7 +54,7 @@ CODE
 
 ## Development
 
-To see what has changed in recent versions of Lifted Wiki, see the [CHANGELOG](CHANGELOG.md).
+To see what has changed in recent versions of the wiki link gem, see the [CHANGELOG](CHANGELOG.md).
 
 ## Core Team Members
 

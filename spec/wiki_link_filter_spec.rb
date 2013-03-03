@@ -81,4 +81,28 @@ describe HTML::Pipeline::WikiLinkFilter do
 
     text.must_equal '<a href="/A*Link*With*Spaces">A Link With Spaces</a>'
   end
+
+  it 'must urlencode special characters in the link but not in the description' do
+    filter = new_filter('[[{}\]]')
+
+    text = filter.call
+
+    text.must_equal '<a href="/%7B%7D%5C">{}\</a>'
+  end
+
+  it 'must strip whitespace from the ends of a link' do
+    filter = new_filter('[[   Link   ]]')
+
+    text = filter.call
+
+    text.must_equal '<a href="/Link">Link</a>'
+  end
+
+  it 'must strip whitespace from the ends of a description' do
+    filter = new_filter('[[Link|   Description   ]]')
+
+    text = filter.call
+
+    text.must_equal '<a href="/Link">Description</a>'
+  end
 end

@@ -3,6 +3,7 @@
 # 
 
 require 'html/pipeline'
+require 'open-uri'
 
 module HTML
   class Pipeline
@@ -33,29 +34,26 @@ module HTML
           link = $1
           desc = $3 ? $3 : $1
 
-          link = convert_whitespace(link)
-          desc = collapse_whitespace(desc)
-
-          "<a href=\"#{@base_url}#{link}\">#{desc}</a>"
+          "<a href=\"#{to_link link}\">#{to_description desc}</a>"
         end
       end
 
       private
 
-      # Collapses multiple whitespace characters into a single space.
+      # Converts the given text into an appropriate link description.
       # 
-      # @param text Text within which to collapse whitespace.
-      # @return Text with collapsed whitespace.
-      def collapse_whitespace(text)
-        text.gsub(/\s+/, ' ')
+      # @param text Proposed description text.
+      # @return Updated text for use as a link description.
+      def to_description(text)
+        text.strip.gsub(/\s+/, ' ')
       end
 
-      # Converts spaces to underscores in the given text.
+      # Converts the given text into an appropriate link.
       # 
-      # @param text Text within which to replace spaces.
-      # @return Text with spaces replaced with underscores.
-      def convert_whitespace(text)
-        text.gsub(/\s+/, @space_replacement)
+      # @param text Proposed link text.
+      # @return Updated text to use as a link.
+      def to_link(text)
+        URI::encode(@base_url + text.strip.gsub(/\s+/, @space_replacement))
       end
     end
   end

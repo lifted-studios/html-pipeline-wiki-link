@@ -66,7 +66,7 @@ To see what has changed in recent versions of the wiki link gem, see the [CHANGE
 
 <!-- ### Other questions
 
-Feel free to chat with the Lifted Wiki core team (and many other users) on IRC in the  [#project](irc://irc.freenode.net/project) channel on Freenode, or via email on the [Project mailing list]().
+Feel free to chat with the wiki link gem core team (and many other users) on IRC in the  [#project](irc://irc.freenode.net/project) channel on Freenode, or via email on the [Project mailing list]().
  -->
 
 ## Copyright

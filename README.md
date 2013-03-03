@@ -73,4 +73,4 @@ Feel free to chat with the wiki link gem core team (and many other users) on IRC
 
 Copyright © 2013 Lee Dohm, Lifted Studios. See [LICENSE](LICENSE.md) for details.
 
-Project is a member of the [OSS Manifesto](http://ossmanifesto.com/).
+Project is a member of the [OSS Manifesto](http://ossmanifesto.org/).

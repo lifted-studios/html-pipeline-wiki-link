@@ -3,6 +3,7 @@
 ## Unreleased
 
 * Add handling for special characters and leading or trailing whitespace.
+* Add tests for base URL settings.
 
 ## 0.0.3
 

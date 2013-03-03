@@ -24,6 +24,10 @@ module HTML
           @base_url = context[:base_url] if context[:base_url]
           @space_replacement = context[:space_replacement] if context[:space_replacement]
         end
+
+        if !@base_url.empty? && @base_url !~ /\/$/
+          @base_url += '/'
+        end
       end
 
       # Performs the translation and returns the updated text.

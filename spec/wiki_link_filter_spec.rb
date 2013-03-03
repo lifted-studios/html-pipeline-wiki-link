@@ -105,4 +105,20 @@ describe HTML::Pipeline::WikiLinkFilter do
 
     text.must_equal '<a href="/Link">Description</a>'
   end
+
+  it 'prepends the link with another string when given a :base_url parameter' do
+    filter = new_filter('[[Link]]', :base_url => '/foo/bar/')
+
+    text = filter.call
+
+    text.must_equal '<a href="/foo/bar/Link">Link</a>'
+  end
+
+  it 'properly joins the base_url with the link' do
+    filter = new_filter('[[Link]]', :base_url => 'foo/bar')
+
+    text = filter.call
+
+    text.must_equal '<a href="foo/bar/Link">Link</a>'
+  end
 end

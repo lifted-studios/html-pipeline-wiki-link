@@ -39,8 +39,7 @@ Rake::TestTask.new('spec') do |spec|
 end
 
 YARD::Rake::YardocTask.new do |t|
-  t.files   = ['lib/**/*.rb', 'CHANGELOG.md', 'CONTRIBUTING.md', 'LICENSE.md', 'README.md']
-  t.options = ['--markup', 'markdown']
+  t.options = ['--markup', 'markdown', '--files', 'CHANGELOG.md,CONTRIBUTING.md,LICENSE.md']
 end
 
 desc 'Build gem'

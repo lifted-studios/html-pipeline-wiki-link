@@ -48,6 +48,11 @@ This is some **Markdown** with a [[Link]] in it!
 CODE
 ```
 
+The wiki link filter supports the standard link types:
+
+* `[[Link]]`
+* `[[Link|Description]]`
+
 <!--
 ## Troubleshooting
 -->

@@ -123,7 +123,7 @@ describe HTML::Pipeline::WikiLinkFilter do
   end
 
   it 'replaces with underscores when nil is given as a space replacement' do
-    filter = new_filter('[[A Link With Spaces]]')
+    filter = new_filter('[[A Link With Spaces]]', :space_replacement => nil)
 
     text = filter.call
 
@@ -131,7 +131,7 @@ describe HTML::Pipeline::WikiLinkFilter do
   end
 
   it 'uses a single forward slash when nil is given as a base URL' do
-    filter = new_filter('[[Link]]')
+    filter = new_filter('[[Link]]', :base_url => nil)
 
     text = filter.call
 

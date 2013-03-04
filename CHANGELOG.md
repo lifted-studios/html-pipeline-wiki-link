@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Unreleased
+## 0.0.4 (Unreleased)
 
 * Add handling for special characters and leading or trailing whitespace.
 * Add tests for base URL settings.

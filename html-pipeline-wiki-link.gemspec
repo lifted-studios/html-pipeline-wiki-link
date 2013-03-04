@@ -29,8 +29,8 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency('minitest', '~> 3.0')
   s.add_development_dependency('rake', '~> 10.0')
-  s.add_development_dependency('redcarpet')
-  s.add_development_dependency('yard', '~> 0.8')
+  s.add_development_dependency('redcarpet')           # For Markdown formatting of YARD documentation
+  s.add_development_dependency('yard', '~> 0.8')      # For documentation
 
   s.files = `git ls-files`.
     split("\n").

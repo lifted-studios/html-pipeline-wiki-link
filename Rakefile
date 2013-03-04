@@ -38,10 +38,13 @@ Rake::TestTask.new('spec') do |spec|
   # spec.warning = true
 end
 
-YARD::Rake::YardocTask.new
+YARD::Rake::YardocTask.new do |t|
+  t.files   = ['lib/**/*.rb', 'CHANGELOG.md', 'CONTRIBUTING.md', 'LICENSE.md', 'README.md']
+  t.options = ['--markup', 'markdown']
+end
 
 desc 'Build gem'
-task :build do
+task :build => :default do
   sh "mkdir -p pkg"
   sh "gem build #{gemspec_file}"
   sh "mv #{gem_file} pkg"

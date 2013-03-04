@@ -121,4 +121,20 @@ describe HTML::Pipeline::WikiLinkFilter do
 
     text.must_equal '<a href="foo/bar/Link">Link</a>'
   end
+
+  it 'replaces with underscores when nil is given as a space replacement' do
+    filter = new_filter('[[A Link With Spaces]]')
+
+    text = filter.call
+
+    text.must_equal '<a href="/A_Link_With_Spaces">A Link With Spaces</a>'
+  end
+
+  it 'uses a single forward slash when nil is given as a base URL' do
+    filter = new_filter('[[Link]]')
+
+    text = filter.call
+
+    text.must_equal '<a href="/Link">Link</a>'
+  end
 end

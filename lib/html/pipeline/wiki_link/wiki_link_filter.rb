@@ -25,7 +25,7 @@ module HTML
           @space_replacement = context[:space_replacement] if context[:space_replacement]
         end
 
-        if !@base_url.empty? && @base_url !~ /\/$/
+        unless @base_url.empty? || @base_url =~ /\/$/
           @base_url += '/'
         end
       end

@@ -34,7 +34,7 @@ module HTML
       # 
       # @return [String] Updated text with translated wiki links.
       def call
-        html.gsub(/\[\[([^|]*)(\|(.*))?\]\]/) do
+        html.gsub(/\[\[([^\]|]*)(\|([^\]]*))?\]\]/) do
           link = $1
           desc = $3 ? $3 : $1
 

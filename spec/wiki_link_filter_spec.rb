@@ -137,4 +137,20 @@ describe HTML::Pipeline::WikiLinkFilter do
 
     text.must_equal '<a href="/Link">Link</a>'
   end
+
+  it 'converts two links on the same line into two links, not one big one with brackets inside' do
+    filter = new_filter('[[Link One]] and [[Link Two]]')
+
+    text = filter.call
+
+    text.must_equal '<a href="/Link_One">Link One</a> and <a href="/Link_Two">Link Two</a>'
+  end
+
+  it 'converts two links with descriptions into two links' do
+    filter = new_filter('[[Link|Link One]] and [[Link|Link Two]]')
+
+    text = filter.call
+
+    text.must_equal '<a href="/Link">Link One</a> and <a href="/Link">Link Two</a>'
+  end
 end

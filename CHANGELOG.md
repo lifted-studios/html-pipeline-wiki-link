@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## 0.0.4 (Unreleased)
+## 0.0.4
 
 * Add handling for special characters and leading or trailing whitespace.
 * Add tests for base URL settings.
+* Fix bug with multiple links in succession.
 
 ## 0.0.3
 

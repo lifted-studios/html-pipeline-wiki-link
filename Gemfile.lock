@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    html-pipeline-wiki-link (0.0.3)
+    html-pipeline-wiki-link (0.0.4)
       html-pipeline (>= 0.0.8)
 
 GEM
@@ -10,7 +10,7 @@ GEM
     activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    escape_utils (0.3.1)
+    escape_utils (0.3.2)
     gemoji (1.4.0)
     github-markdown (0.5.3)
     html-pipeline (0.0.8)
